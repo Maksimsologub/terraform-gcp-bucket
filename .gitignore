@@ -1,33 +1,18 @@
-# 🌍 Terraform state & logs
+# Ignore Terraform state
 .terraform/
 *.tfstate
-*.tfstate.*
+*.tfstate.backup
+*.tfvars
+
+# Ignore crash logs
 crash.log
-terraform.tfvars
-terraform.tfvars.json
+
+# Ignore override files
 override.tf
 override.tf.json
-*.tfplan
-*.zip
-*.backup
+*_override.tf
+*_override.tf.json
 
-# 🔒 Sensitive files
-*.pem
-*.key
-*.crt
-*.env
-*.json
-
-# 🛠️ System and IDE files
-.DS_Store
-.idea/
-.vscode/
-*.swp
-
-# 📦 Provider binaries (like the one that caused your error)
-.terraform/providers/
-
-# 💾 Optional: ignore shell scripts or compiled files
-*.sh
-*.exe
-*.bin
+# Sensitive or local-only data
+.terraform.lock.hcl
+.terraform.tfstate
